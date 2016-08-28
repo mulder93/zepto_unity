@@ -1,0 +1,23 @@
+﻿using UnityEngine;
+
+public class Obstacle : MonoBehaviour
+{
+    [SerializeField]
+    private float m_speed;
+
+    [SerializeField]
+    private float m_minYOffset;
+
+    [SerializeField]
+    private float m_maxYOffset;
+
+    void Start()
+    {
+        transform.Translate(new Vector2(0, Random.Range(m_minYOffset, m_maxYOffset)));
+    }
+
+    void Update()
+    {
+        transform.Translate(Vector2.left * m_speed * Time.deltaTime);
+    }
+}
