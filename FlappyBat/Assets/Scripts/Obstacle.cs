@@ -20,4 +20,9 @@ public class Obstacle : MonoBehaviour
     {
         transform.Translate(Vector2.left * m_speed * Time.deltaTime);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Destroy(this.gameObject);
+    }
 }
