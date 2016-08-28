@@ -11,17 +11,17 @@ public class Obstacle : MonoBehaviour
     [SerializeField]
     private float m_maxYOffset;
 
-    void Start()
+    private void Start()
     {
         transform.Translate(new Vector2(0, Random.Range(m_minYOffset, m_maxYOffset)));
     }
 
-    void Update()
+    private void Update()
     {
         transform.Translate(Vector2.left * m_speed * Time.deltaTime);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(this.gameObject);
     }
