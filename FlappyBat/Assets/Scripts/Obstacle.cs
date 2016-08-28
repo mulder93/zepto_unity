@@ -23,6 +23,8 @@ public class Obstacle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(this.gameObject);
+        if (other.name == "Left Limit") {
+            Destroy(this.gameObject);
+        }
     }
 }

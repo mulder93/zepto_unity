@@ -20,7 +20,7 @@ public class Game : MonoBehaviour
 
 	void Start()
     {
-        m_timeToNextGeneration = m_obstacleGenerationInterval;
+        m_timeToNextGeneration = 0;
         m_startObstaclePosition = m_obstaclePrototype.transform.position;
         m_isPaused = true;
     }
